@@ -31,7 +31,7 @@ class NameObject:
         print(f"              Expiration Date: {self.md_name_obj.GetLicenseExpirationDate()}")
       
         """
-        This number should match with file properties of the Melissa Data Object binary file.
+        This number should match with file properties of the Melissa Object binary file.
         If TEST appears with the build number, there may be a license key issue.
         """
         print(f"               Object Version: {self.md_name_obj.GetBuildNumber()}\n")
@@ -47,8 +47,8 @@ class NameObject:
         result_codes = self.md_name_obj.GetResults()
 
         """ 
-        ResultsCodes explain any issues name object has with the object.
-        List of result codes for Name object
+        ResultsCodes explain any issues Name Object has with the object.
+        List of result codes for Name Object
         https://wiki.melissadata.com/?title=Result_Code_Details#Name_Object
         """
 
@@ -76,7 +76,7 @@ def parse_arguments():
     return (license, test_name, data_path)
 
 def run_as_console(license, test_name, data_path):
-    print("\n\n===== WELCOME TO MELISSA DATA NAME OBJECT WINDOWS PYTHON3 SAMPLE ======\n")
+    print("\n\n=========== WELCOME TO MELISSA NAME OBJECT WINDOWS PYTHON3 ============\n")
 
     name_object = NameObject(license, data_path)
 
@@ -140,7 +140,7 @@ def run_as_console(license, test_name, data_path):
             
               print("Invalid Response, please respond 'Y' or 'N'")
 
-    print("\n============ THANK YOU FOR USING MELISSA DATA PYTHON OBJECT ===========\n")
+    print("\n=============== THANK YOU FOR USING MELISSA PYTHON OBJECT =============\n")
     
 
 

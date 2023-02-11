@@ -1,5 +1,5 @@
-# Name:    MelissaDataNameObjectWindowsPython
-# Purpose: Use the Melissa Updater to make the MelissaDataNameObjectWindowsPython sample usable
+# Name:    MelissaNameObjectWindowsPython3
+# Purpose: Use the Melissa Updater to make the MelissaNameObjectWindowsPython3 code usable
 
 
 ######################### Parameters ##########################
@@ -26,7 +26,7 @@ $ProductName = "DQ_NAME_DATA"
 # Modify this if you want to use 
 $CurrentPath = $PSScriptRoot
 Set-Location $CurrentPath
-$ProjectPath = "$CurrentPath\MelissaDataNameObjectWindowsPython3Sample"
+$ProjectPath = "$CurrentPath\MelissaNameObjectWindowsPython3"
 $DataPath = "$ProjectPath\Data"
 
 If (!(Test-Path $DataPath)) {
@@ -111,7 +111,7 @@ function CheckDLLs() {
 
 ########################## Main ############################
 
-Write-Host "`n================= Sample of Melissa Data Name Object =================`n                    [ Python3 | Windows | 64BIT ]`n"
+Write-Host "`n========================= Melissa Name Object =========================`n                    [ Python3 | Windows | 64BIT ]`n"
 
 # Get license (either from parameters or user input)
 if ([string]::IsNullOrEmpty($license) ) {
@@ -147,14 +147,11 @@ if (!$DLLsAreDownloaded) {
 
 Write-Host "All file(s) have been downloaded/updated! "
 
-# Start sample
-# Build project
-Write-Host "`n============================ BUILD PROJECT ============================"
-
+# Start
 # Run project
 if ([string]::IsNullOrEmpty($name)) {
-  python3 MelissaDataNameObjectWindowsPython3Sample/MelissaDataNameObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath
+  python3 MelissaNameObjectWindowsPython3/MelissaNameObjectWindowsPython3.py --license $License  --dataPath $DataPath
 }
 else {
-  python3 MelissaDataNameObjectWindowsPython3Sample/MelissaDataNameObjectWindowsPython3Sample.py --license $License  --dataPath $DataPath --name $name
+  python3 MelissaNameObjectWindowsPython3/MelissaNameObjectWindowsPython3.py --license $License  --dataPath $DataPath --name $name
 }

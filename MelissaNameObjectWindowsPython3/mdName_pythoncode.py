@@ -8,9 +8,9 @@ dir = os.getcwd()
 
 
 if (os.name == 'nt'):
-  lib = ctypes.CDLL(f'{dir}/MelissaDataNameObjectWindowsPython3Sample/mdName.dll')
+  lib = ctypes.CDLL(f'{dir}/MelissaNameObjectWindowsPython3/mdName.dll')
 else:
-  lib = ctypes.CDLL('libmdPhone.so')
+  lib = ctypes.CDLL(f'{dir}/MelissaNameObjectLinuxPython3/libmdName.so')
 
 lib.mdNameCreate.argtypes = []
 lib.mdNameCreate.restype = c_void_p

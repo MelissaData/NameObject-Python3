@@ -1,8 +1,12 @@
-# Melissa Data Name Object Windows Python3 Sample
+# Melissa - Name Object Windows Python3
 
 ## Purpose
 
-This is an sample of the Melissa Data Name Object using Python3
+This code showcases the Melissa Name Object using Python3
+
+Please feel free to copy or embed this code to your own project. Happy coding!
+
+For the latest Melissa Name Object release notes, please visit: https://releasenotes.melissa.com/on-premise-api/name-object/
 
 The console will ask the user for:
 
@@ -29,7 +33,7 @@ And return
 
 #### mdName.dll
 
-This is the c++ code of the Melissa Data Object.
+This is the c++ code of the Melissa Object.
 
 #### Data File(s)
 - mdName.cfg
@@ -42,13 +46,28 @@ This project is compatible with Python3
 
 #### Install the Python3
 Before starting, make sure that Python3 has been correctly installed on your machine and your environment paths are configured. 
+
+You can download Python here: 
+https://www.python.org/downloads/
+
+To set up your Path to correctly to use the python3 command, execute the following steps:
+1) Run Powershell as an administrator 
+2) Execute the command: 
+`New-Item -ItemType SymbolicLink -Path "Link" -Target "Target"`
+
+    where "Target" is the path to py.exe (by default this should be "C:\Windows\py.exe")\
+    and "Link" is the path to py.exe, but "py.exe" is replaced with "python3.exe"\
+    For Example:\
+    `New-Item -ItemType SymbolicLink -Path "C:\Windows\python3.exe" -Target "C:\Windows\py.exe"`
+
 If you are unsure, you can check by opening a command prompt window and typing the following:
 `python3 --version`
 
- ![alt text](/screenshots/python_version.PNG)
+![alt text](/screenshots/python_version.PNG)
 
 If you see the version number then you have installed Python3 and set up your environment paths correctly!
 
+----------------------------------------
 
 #### Set up Powershell settings
 
@@ -82,41 +101,41 @@ Melissa Updater is a CLI application allowing the user to update their Melissa a
 	- It will handle all of the data download/path and dll(s) for you. 
 2.  If you already have the latest DQS Release (ZIP), you can find the data file(s) and dll(s) in there
 	- Use the location of where you copied/installed the data and update the "$DataPath" variable in the powershell script.
-	- Copy all the dll(s) mentioned above into the `MelissaDataNameObjectWindowsPython3Sample` project folder.
+	- Copy all the dll(s) mentioned above into the `MelissaNameObjectWindowsPython3` project folder.
 	
 ----------------------------------------
 
 ## Run Powershell Script
 Parameters:
- - -name: a test name
+- -name: a test name
  	
   This is convenient when you want to get results for a specific name in one run instead of testing multiple names in interactive mode.  
 
-- -license (optional): a license string to test the name object
+- -license (optional): a license string to test the Name Object
 - -quiet (optional): add to the command if you do not want to get any console output from the Melissa Updater
 
 When you have modified the script to match your data location, let's run the script. There are two modes:
 - Interactive 
 
-	The script will prompt the user for an name, then use the provided name to test Name object. For example:
+	The script will prompt the user for an name, then use the provided name to test Name Object. For example:
 	```
-	$ .\MelissaDataNameObjectWindowsPython3Sample.ps1
+	$ .\MelissaNameObjectWindowsPython3.ps1
 	```
     For quiet mode:
     ```
-    $ .\MelissaDataNameObjectWindowsPython3Sample.ps1 -quiet
+    $ .\MelissaNameObjectWindowsPython3.ps1 -quiet
     ```
 - Command Line 
 
-	You can pass a name in ```-name``` parameter and a license string in ```-license``` parameter to test Name object. For example:
+	You can pass a name in ```-name``` parameter and a license string in ```-license``` parameter to test Name Object. For example:
 	```
-    $ .\MelissaDataNameObjectWindowsPython3Sample.ps1 -name "Ray Melissa" 
-    $ .\MelissaDataNameObjectWindowsPython3Sample.ps1 -name "Ray Melissa" -license "<your_license_string>"
+    $ .\MelissaNameObjectWindowsPython3.ps1 -name "Ray Melissa" 
+    $ .\MelissaNameObjectWindowsPython3.ps1 -name "Ray Melissa" -license "<your_license_string>"
     ```
 	For quiet mode:
     ```
-    $ .\MelissaDataNameObjectWindowsPython3Sample.ps1 -name "Ray Melissa" -quiet
-    $ .\MelissaDataNameObjectWindowsPython3Sample.ps1 -name "Ray Melissa" -license "<your_license_string>" -quiet
+    $ .\MelissaNameObjectWindowsPython3.ps1 -name "Ray Melissa" -quiet
+    $ .\MelissaNameObjectWindowsPython3.ps1 -name "Ray Melissa" -license "<your_license_string>" -quiet
     ```
 This is the expected output from a successful setup for interactive mode:
 
@@ -125,7 +144,7 @@ This is the expected output from a successful setup for interactive mode:
     
 ## Troubleshooting
 
-Troubleshooting for errors found while running your sample program.
+Troubleshooting for errors found while running your program.
 
 ### Errors:
 
@@ -140,7 +159,7 @@ Troubleshooting for errors found while running your sample program.
 ## Contact Us
 
 For free technical support, please call us at 800-MELISSA ext. 4
-(800-635-4772 ext. 4) or email us at tech@MelissaData.com.
+(800-635-4772 ext. 4) or email us at tech@melissa.com.
 
-To purchase this product, contact Melissa Data sales department at
+To purchase this product, contact Melissa sales department at
 800-MELISSA ext. 3 (800-635-4772 ext. 3).
