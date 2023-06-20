@@ -2,15 +2,14 @@ from ctypes import *
 from enum import Enum
 import ctypes
 import os
+import sys
 
-
-dir = os.getcwd()
-
-
-if (os.name == 'nt'):
-  lib = ctypes.CDLL(f'{dir}/MelissaNameObjectWindowsPython3/mdName.dll')
+if (os.name == 'nt' and sys.version_info[:2] >= (3,8)):
+  lib = ctypes.CDLL('mdName.dll', winmode=0)
+elif (os.name == 'nt'):
+  lib = ctypes.CDLL('mdName.dll')
 else:
-  lib = ctypes.CDLL(f'{dir}/MelissaNameObjectLinuxPython3/libmdName.so')
+  lib = ctypes.CDLL('libmdName.so')
 
 lib.mdNameCreate.argtypes = []
 lib.mdNameCreate.restype = c_void_p
