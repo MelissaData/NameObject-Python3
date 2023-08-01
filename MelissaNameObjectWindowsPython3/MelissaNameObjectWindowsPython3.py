@@ -96,7 +96,7 @@ def run_as_console(license, test_name, data_path):
 
         """ Print user input """
         print("\n=============================== INPUTS ================================\n")
-        print(f"\t               Name: {name}")
+        print(f"\t                 Name: {name}")
 
         """ Execute Name Object """
         data_container = name_object.execute_object_and_result_codes(data)

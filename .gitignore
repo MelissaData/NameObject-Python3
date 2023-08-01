@@ -2,5 +2,6 @@ __pycache__/
 Data/
 mdName.dll
 mdName.dll.hash
+*.hash
 MelissaUpdater
 # mdName_pythoncode.py
