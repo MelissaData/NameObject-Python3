@@ -177,7 +177,7 @@ class mdName(object):
 		lib.mdNameDestroy(self.I)
 
 	def SetPathToNameFiles(self, p1):
-		lib.mdNameSetPathToNameFiles(self.I, p1.encode('utf-8'))
+		lib.mdNameSetPathToNameFiles(self.I, (p1 or '').encode('utf-8'))
 
 	def InitializeDataFiles(self):
 		return ProgramStatus(lib.mdNameInitializeDataFiles(self.I))
@@ -186,7 +186,7 @@ class mdName(object):
 		return lib.mdNameGetInitializeErrorString(self.I).decode('utf-8')
 
 	def SetLicenseString(self, p1):
-		return lib.mdNameSetLicenseString(self.I, p1.encode('utf-8'))
+		return lib.mdNameSetLicenseString(self.I, (p1 or '').encode('utf-8'))
 
 	def GetBuildNumber(self):
 		return lib.mdNameGetBuildNumber(self.I).decode('utf-8')
@@ -222,49 +222,49 @@ class mdName(object):
 		return lib.mdNameAddSalutation(self.I, Salutations(p1).value)
 
 	def SetSalutationPrefix(self, p1):
-		lib.mdNameSetSalutationPrefix(self.I, p1.encode('utf-8'))
+		lib.mdNameSetSalutationPrefix(self.I, (p1 or '').encode('utf-8'))
 
 	def SetSalutationSuffix(self, p1):
-		lib.mdNameSetSalutationSuffix(self.I, p1.encode('utf-8'))
+		lib.mdNameSetSalutationSuffix(self.I, (p1 or '').encode('utf-8'))
 
 	def SetSalutationSlug(self, p1):
-		lib.mdNameSetSalutationSlug(self.I, p1.encode('utf-8'))
+		lib.mdNameSetSalutationSlug(self.I, (p1 or '').encode('utf-8'))
 
 	def ClearProperties(self):
 		lib.mdNameClearProperties(self.I)
 
 	def SetFullName(self, p1):
-		lib.mdNameSetFullName(self.I, p1.encode('utf-8'))
+		lib.mdNameSetFullName(self.I, (p1 or '').encode('utf-8'))
 
 	def SetPrefix(self, p1):
-		lib.mdNameSetPrefix(self.I, p1.encode('utf-8'))
+		lib.mdNameSetPrefix(self.I, (p1 or '').encode('utf-8'))
 
 	def SetPrefix2(self, p1):
-		lib.mdNameSetPrefix2(self.I, p1.encode('utf-8'))
+		lib.mdNameSetPrefix2(self.I, (p1 or '').encode('utf-8'))
 
 	def SetFirstName(self, p1):
-		lib.mdNameSetFirstName(self.I, p1.encode('utf-8'))
+		lib.mdNameSetFirstName(self.I, (p1 or '').encode('utf-8'))
 
 	def SetFirstName2(self, p1):
-		lib.mdNameSetFirstName2(self.I, p1.encode('utf-8'))
+		lib.mdNameSetFirstName2(self.I, (p1 or '').encode('utf-8'))
 
 	def SetMiddleName(self, p1):
-		lib.mdNameSetMiddleName(self.I, p1.encode('utf-8'))
+		lib.mdNameSetMiddleName(self.I, (p1 or '').encode('utf-8'))
 
 	def SetMiddleName2(self, p1):
-		lib.mdNameSetMiddleName2(self.I, p1.encode('utf-8'))
+		lib.mdNameSetMiddleName2(self.I, (p1 or '').encode('utf-8'))
 
 	def SetSuffix(self, p1):
-		lib.mdNameSetSuffix(self.I, p1.encode('utf-8'))
+		lib.mdNameSetSuffix(self.I, (p1 or '').encode('utf-8'))
 
 	def SetSuffix2(self, p1):
-		lib.mdNameSetSuffix2(self.I, p1.encode('utf-8'))
+		lib.mdNameSetSuffix2(self.I, (p1 or '').encode('utf-8'))
 
 	def SetLastName(self, p1):
-		lib.mdNameSetLastName(self.I, p1.encode('utf-8'))
+		lib.mdNameSetLastName(self.I, (p1 or '').encode('utf-8'))
 
 	def SetLastName2(self, p1):
-		lib.mdNameSetLastName2(self.I, p1.encode('utf-8'))
+		lib.mdNameSetLastName2(self.I, (p1 or '').encode('utf-8'))
 
 	def Parse(self):
 		return lib.mdNameParse(self.I)
@@ -288,7 +288,7 @@ class mdName(object):
 		return lib.mdNameGetResults(self.I).decode('utf-8')
 
 	def GetResultCodeDescription(self, p1, opt):
-		return lib.mdNameGetResultCodeDescription(self.I, p1.encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
+		return lib.mdNameGetResultCodeDescription(self.I, (p1 or '').encode('utf-8'), ResultCdDescOpt(opt).value).decode('utf-8')
 
 	def GetPrefix(self):
 		return lib.mdNameGetPrefix(self.I).decode('utf-8')
@@ -330,10 +330,10 @@ class mdName(object):
 		return lib.mdNameGetSalutation(self.I).decode('utf-8')
 
 	def StandardizeCompany(self, p1):
-		return lib.mdNameStandardizeCompany(self.I, p1.encode('utf-8')).decode('utf-8')
+		return lib.mdNameStandardizeCompany(self.I, (p1 or '').encode('utf-8')).decode('utf-8')
 
 	def SetReserved(self, p1, p2):
-		lib.mdNameSetReserved(self.I, p1.encode('utf-8'), p2.encode('utf-8'))
+		lib.mdNameSetReserved(self.I, (p1 or '').encode('utf-8'), (p2 or '').encode('utf-8'))
 
 	def GetReserved(self, p1):
-		return lib.mdNameGetReserved(self.I, p1.encode('utf-8')).decode('utf-8')
+		return lib.mdNameGetReserved(self.I, (p1 or '').encode('utf-8')).decode('utf-8')
