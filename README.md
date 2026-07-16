@@ -80,8 +80,8 @@ The console will then prompt you with the following warning shown in the image b
 
 #### Download this project
 ```
-git clone https://git.melissadata.com/dtgroup/melissadataobjectexamples/python3/melissadatanameobjectwindowspython3sample
-cd MelissaNameObjectWindowsPython3
+git clone https://github.com/MelissaData/NameObject-Python3
+cd NameObject-Python3
 ```
 
 #### Set up Melissa Updater 
